@@ -1,4 +1,4 @@
-# Repository Tugas Akhir Semester 2 Basis Data. 
+![image](https://github.com/Noklent-Fardian/Tak-Umbahno-Laundry/assets/70679702/29ac91f5-2427-41d2-9586-f65441873d0a)# Repository Tugas Akhir Semester 2 Basis Data. 
 ![Static Badge](https://img.shields.io/badge/Mata%20Kuliah-Basis%20Data-13e600) ![Static Badge](https://img.shields.io/badge/Contributors-3%20contributor-4a92f0)
 
 
@@ -9,7 +9,7 @@ Ta’umbahno Laundry adalah suatu perusahaan yang menawarkan jasa mencuci pakaia
 ## Meet The Team 
 1. <a href="https://github.com/Noklent-Fardian"> Noklent Fardian Erix</a> (TI-1E)
 2. <a href="">  Khoirotun Nisa’ </a> (TI-1E)
-3. <a href="">  Annisa Eka Puspita</a> (TI-1E)
+3. <a href="">  Beryl Funky Mubarok</a> (TI-1E)
 
 ## read docs for todo and make a crud
 
