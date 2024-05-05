@@ -1,4 +1,4 @@
-![image](https://github.com/Noklent-Fardian/Tak-Umbahno-Laundry/assets/70679702/29ac91f5-2427-41d2-9586-f65441873d0a)# Repository Tugas Akhir Semester 2 Basis Data. 
+# Repository Tugas Akhir Semester 2 Basis Data. 
 ![Static Badge](https://img.shields.io/badge/Mata%20Kuliah-Basis%20Data-13e600) ![Static Badge](https://img.shields.io/badge/Contributors-3%20contributor-4a92f0)
 
 
