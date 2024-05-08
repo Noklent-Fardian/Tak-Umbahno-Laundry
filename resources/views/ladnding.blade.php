@@ -60,7 +60,7 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="index.html#about">Log-in</a>
+            <a class="btn-getstarted" href="/login">Log-in</a>
 
         </div>
     </header>
@@ -76,7 +76,7 @@
                         <h1 class="">Solusi Cerdas Pakaian Kotor Anda</h1>
                         <p class="">Anda Malas, Kami Senang✋😊 </p>
                         <div class="d-flex">
-                            <a href="#about" class="btn-get-started">Log-in</a>
+                            <a href="/login" class="btn-get-started">Log-in</a>
                             <a href="https://youtu.be/MMRcbv0PNbo"
                                 class="glightbox btn-watch-video d-flex align-items-center"><i
                                     class="bi bi-play-circle"></i><span>Watch Video</span></a>
@@ -449,7 +449,8 @@
         </div>
 
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">Ta'Umbahno</strong> <span>All Rights Reserved</span>
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Ta'Umbahno</strong> <span>All Rights
+                    Reserved</span>
             </p>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
