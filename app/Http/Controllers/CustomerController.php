@@ -36,7 +36,7 @@ class CustomerController extends Controller
      */
     public function create(): View
     {
-        $users = User::all();
+        $users = User::where('role', 'Pembeli')->get();
         $jenisMembers = JenisMember::all(); 
         // Menampilkan view yang sesuai untuk membuat customer baru
         return view('customers.create', compact('users', 'jenisMembers'));

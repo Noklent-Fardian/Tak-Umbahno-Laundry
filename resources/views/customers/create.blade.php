@@ -71,7 +71,7 @@
                                     <option value="">Pilih Pengguna</option>
                                     <!-- Daftar pengguna -->
                                     @foreach($users as $user)
-                                        <option value="{{ $user->id }}" {{ old('user_id') == $user->id ? 'selected' : '' }}>
+                                        <option value="{{ $user->id}}" {{ old('user_id') == $user->id ? 'selected' : '' }}>
                                             {{ $user->name }}
                                         </option>
                                     @endforeach

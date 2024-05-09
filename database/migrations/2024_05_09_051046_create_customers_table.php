@@ -21,7 +21,7 @@ return new class extends Migration
             );
             $table->foreignId('jenis_member_id')->constrained(
                 table: ('jenis_members'), indexName: 'customers_jenisMember_id'
-            );
+            )->nullable();
             $table->timestamps();
         });
     }

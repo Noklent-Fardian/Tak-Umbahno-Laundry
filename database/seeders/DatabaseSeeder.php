@@ -33,6 +33,15 @@ class DatabaseSeeder extends Seeder
             'role' => 'Pembeli',
             'password' => bcrypt('pembeli123'),
         ]);
-        
+        DB ::table('jenis_members')->insert([
+            'nama_jenisMember' => 'Reguler',
+        ]);
+        DB ::table('jenis_members')->insert([
+            'nama_jenisMember' => 'Premium',
+        ]);
+        DB ::table('jenis_members')->insert([
+            'nama_jenisMember' => 'VIP',
+        ]);
+
     }
 }

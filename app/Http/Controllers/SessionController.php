@@ -1,6 +1,10 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 class SessionController extends Controller
 {
    function index()
@@ -16,10 +20,26 @@ class SessionController extends Controller
       $credentials = $request->only('email', 'password');
       if (auth()->attempt($credentials)) {
          $request->session()->regenerate();
-         return redirect()->intended('dashboard');
+         // return redirect()->intended('pegawai/index');
+         if (auth()->user()->role === 'Pegawai') {
+            return redirect()->intended('pegawai/index');
+         } elseif (auth()->user()->role === 'Pembeli') {
+            return redirect()->intended('pelanggan/index');
+         }
       }
-      return back()->withErrors([
+      return redirect()->back()->withInput()->withErrors([
          'email' => 'Email Atau Sandi Salah.',
       ]);
    }
+   
+   function page1()
+   {
+      return view('pegawai/index');
+   }
+   function page2()
+   {
+      return view('pelanggan/index');
+   }
+
+
 }
