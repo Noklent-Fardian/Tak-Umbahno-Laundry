@@ -3,7 +3,7 @@
 
 
 ## Sistem Ta'Umbahno Laundry
-<img src=".\storage\assets\readme\pxmt5sxwnd579lfjxh4m6w3A2vb4rmmflwxgg5tq4drnAqvxxp0ylh9x1vr704qpv11flxvgsqdnx5vmfrr0xx40xz2k34lhv9r8rt627vg58sw5z0kjls1gshvscpvwp2wg7vb4h1A05fzdzA408ly5223r27zsl4t1gkrjhkhd69gkgh81.png" width="30%" align="center"/>
+<img src=".\storage\assets\readme\1.png" width="30%" align="center"/>
 Ta’umbahno Laundry adalah suatu perusahaan yang menawarkan jasa mencuci pakaian kotor dan penatu.
 
 ## Meet The Team 

@@ -19,6 +19,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'no_hp',
+        'role',
         'password',
     ];
 
@@ -43,5 +45,23 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public static function getData(int $paginate = 20)
+    {
+        return User::orderBy('created_at', 'desc')->paginate($paginate);
+    }
+    public static function search($request, $col)
+    {
+        return User::where($col, 'like', '%' . $request . '%')->orderBy('created_at', 'desc')->paginate(20);
+    }
+
+    public static function filterRole($filter)
+    {
+        return User::role($filter)->orderBy('created_at', 'desc')->paginate(20);
+    }
+
+    public static function searchFilterRole($request, $col, $filter)
+    {
+        return User::role($filter)->where($col, 'like', '%' . $request . '%')->orderBy('created_at', 'desc')->paginate(20);
     }
 }

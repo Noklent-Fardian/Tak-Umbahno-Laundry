@@ -41,9 +41,9 @@
                         <div class="my-5">
                             @csrf
                             <div class="form-group my-3">
-                                <label for="email" class="">{{ __('Nomor HP') }} <span class="text-danger">*</span></label>
+                                <label for="email" class="">{{ __('E-Mail') }} <span class="text-danger">*</span></label>
                                 <div class="">
-                                    <input id="email" type="number" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus >
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
