@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/login', [SessionController::class, 'index'])->name('login');
 Route::post('/login', [SessionController::class, 'login']);
+Route::resource('/customers', \App\Http\Controllers\CustomerController::class);
