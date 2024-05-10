@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->String('customer_nama');
-            $table->integer('customer_noTelp');
+            $table->String('customer_noTelp', 12);
             $table->String('customer_alamat');
             $table->foreignId('user_id')->constrained(
                 table: ('users'), indexName: 'customers_user_id'
