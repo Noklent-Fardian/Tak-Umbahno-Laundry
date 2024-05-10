@@ -126,5 +126,108 @@ class DatabaseSeeder extends Seeder
             'jumlah_mensuplai' => 100,
             'satuan_mensuplai' => 'liter',
         ]);
+        DB::table('layanans')->insert([
+            'nama_layanan' => 'Cuci Express 3 jam selesai',
+            'harga_layanan' => 12000,
+            'jenis_satuan' => 'kg',
+            'deskripsi_layanan' => 'Cuci Express 3 jam selesai, dapat ditunggu di tempat,bisa dijemput dan diantar',
+            'stock_used' => 0.2,
+            'stock_used2' => 0.1,
+        ]);
+        DB::table('layanans')->insert([
+            'nama_layanan' => 'Cuci Regular 3 hari selesai',
+            'harga_layanan' => 5000,
+            'jenis_satuan' => 'kg',
+            'deskripsi_layanan' => 'Cuci Express 3 hari selesai',
+            'stock_used' => 0.2,
+            'stock_used2' => 0.1,
+        ]);
+        DB::table('layanans')->insert([
+            'nama_layanan' => 'Cuci sprei sedang',
+            'harga_layanan' => 10000,
+            'jenis_satuan' => 'pcs',
+            'deskripsi_layanan' => 'Cuci sprei sedang',
+            'stock_used' => 0.2,
+            'stock_used2' => 0.1,
+        ]);
+        DB::table('layanans')->insert([
+            'nama_layanan' => 'Cuci spre besar',
+            'harga_layanan' => 15000,
+            'jenis_satuan' => 'pcs',
+            'deskripsi_layanan' => 'Cuci sprei besar',
+            'stock_used' => 0.1,
+            'stock_used2' => 0.1,
+        ]);
+        DB::table('layanans')->insert([
+            'nama_layanan' => 'Cuci boneka kecil',
+            'harga_layanan' => 5000,
+            'jenis_satuan' => 'pcs',
+            'deskripsi_layanan' => 'Cuci boneka',
+            'stock_used' => 0.1,
+            'stock_used2' => 0.1,
+        ]);
+        DB::table('layanans')->insert([
+            'nama_layanan' => 'Cuci boneka besar',
+            'harga_layanan' => 10000,
+            'jenis_satuan' => 'pcs',
+            'deskripsi_layanan' => 'Cuci boneka besar',
+            'stock_used' => 0.2,
+            'stock_used2' => 0.2,
+        ]);
+
+        DB::table('cara_bayars')->insert([
+            'nama_caraBayar' => 'Cash',
+        ]);
+        DB::table('cara_bayars')->insert([
+            'nama_caraBayar' => 'Debit',
+        ]);
+        DB::table('cara_bayars')->insert([
+            'nama_caraBayar' => 'ovo',
+        ]);
+        DB::table('cara_bayars')->insert([
+            'nama_caraBayar' => 'Dana',
+        ]);
+        DB::table('cara_bayars')->insert([
+            'nama_caraBayar' => 'Link Aja',
+        ]);
+        DB::table('transaksis')->insert([
+            'id_pegawai' => 1,
+            'id_cara_bayar' => 1,
+            'id_customer' => 1,
+            'id_layanan' => 1,
+            'total_transaksi' => 12000,
+            'tanggal_transaksi' => '2024-05-10',
+            'estimasi_selesai' => '2024-05-10',
+            'status_transaksi' => 'Selesai',
+            'diskon' => 0,
+            'total_bayar' => 12000,
+            'rincian' => 'Cuci Express 3 jam selesai',
+        ]);
+        DB::table('transaksis')->insert([
+            'id_pegawai' => 1,
+            'id_cara_bayar' => 1,
+            'id_customer' => 1,
+            'id_layanan' => 2,
+            'total_transaksi' => 5000,
+            'tanggal_transaksi' => '2024-05-10',
+            'estimasi_selesai' => '2024-05-13',
+            'status_transaksi' => 'Selesai',
+            'diskon' => 0,
+            'total_bayar' => 5000,
+            'rincian' => 'Cuci Regular 3 hari selesai',
+        ]);
+        DB::table('transaksis')->insert([
+            'id_pegawai' => 1,
+            'id_cara_bayar' => 1,
+            'id_customer' => 1,
+            'id_layanan' => 3,
+            'total_transaksi' => 10000,
+            'tanggal_transaksi' => '2024-05-10',
+            'estimasi_selesai' => '2024-05-13',
+            'status_transaksi' => 'belum selesai',
+            'diskon' => 0,
+            'total_bayar' => 10000,
+            'rincian' => 'Cuci sprei sedang',
+        ]);
     }
 }

@@ -25,7 +25,7 @@ class penyuplai extends Model
     //         return Pegawai::where($col, 'like', '%' . $request . '%')->orderBy('created_at', 'desc')->paginate(20);
     //     }
     use HasFactory;
-    protected $table = 'penyuplai';
+
     protected $primaryKey = 'id_penyuplai';
     protected $fillable = [
         'nama_penyuplai',
