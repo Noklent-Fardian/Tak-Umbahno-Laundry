@@ -3,6 +3,10 @@
 use App\Http\Controllers\pegawai\PenyuplaiController;
 use App\Http\Controllers\pegawai\JenisMemberController;
 use App\Http\Controllers\pegawai\CayaBayarController;
+use App\Http\Controllers\pegawai\StockController;
+use App\Http\Controllers\pegawai\LayananController;
+use App\Http\Controllers\pegawai\AccountController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
 
@@ -59,6 +63,14 @@ Route::post('/pegawai/layanan/store', [App\Http\Controllers\pegawai\LayananContr
 Route::get('/pegawai/layanan/edit/{id}', [App\Http\Controllers\pegawai\LayananController::class, 'edit'])->name('pegawai.layanan.edit')->middleware(['auth', 'isloginPegawai']);
 Route::patch('/pegawai/layanan/update/{id}', [App\Http\Controllers\pegawai\LayananController::class, 'update'])->name('pegawai.layanan.update')->middleware(['auth', 'isloginPegawai']);
 Route::delete('/pegawai/layanan/delete/{id}', [App\Http\Controllers\pegawai\LayananController::class, 'destroy'])->name('pegawai.layanan.delete')->middleware(['auth', 'isloginPegawai']);
+
+//account
+Route::get('/pegawai/account/index', [App\Http\Controllers\pegawai\AccountController::class, 'index'])->name('pegawai.account.index')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/account/tambah', [App\Http\Controllers\pegawai\AccountController::class, 'create'])->name('pegawai.account.create')->middleware(['auth', 'isloginPegawai']);
+Route::post('/pegawai/account/store', [App\Http\Controllers\pegawai\AccountController::class, 'store'])->name('pegawai.account.store')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/account/edit/{id}', [App\Http\Controllers\pegawai\AccountController::class, 'edit'])->name('pegawai.account.edit')->middleware(['auth', 'isloginPegawai']);
+Route::patch('/pegawai/account/update/{id}', [App\Http\Controllers\pegawai\AccountController::class, 'update'])->name('pegawai.account.update')->middleware(['auth', 'isloginPegawai']);
+Route::delete('/pegawai/account/delete/{id}', [App\Http\Controllers\pegawai\AccountController::class, 'destroy'])->name('pegawai.account.delete')->middleware(['auth', 'isloginPegawai']);
 
 
 
