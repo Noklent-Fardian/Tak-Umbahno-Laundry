@@ -19,8 +19,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Boostrap -->
     <link href="{{ url('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -37,9 +35,11 @@
     <!-- Voler Admin Template -->
     <link rel="stylesheet" href="{{ url('css/app.css') }}">
     <link rel="stylesheet" href="{{ url('js/perfect-scrollbar/perfect-scrollbar.css') }}">
+ 
 
     <!-- Sweet Alert -->
     <script src="{{ url('js/sweetalert/sweetalert.min.js') }}"></script>
+
 
     <!-- Main CSS File -->
     <script src="https://kit.fontawesome.com/b3b4af6c9c.js" crossorigin="anonymous"></script>
@@ -197,7 +197,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <li class='sidebar-title pt-4'>Sub Menu</li>
 
                         <li class="sidebar-item">
@@ -208,7 +208,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class='sidebar-link'>
+                            <a href="{{ url('pegawai/penyuplai/index') }}" class='sidebar-link'>
                                 <i class="fas fa-book"></i>
                                 <span class="ml-md-3">Supplier</span>
                             </a>
@@ -242,7 +242,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex align-items-center navbar-light ms-auto">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{auth()->user()->name}}</span>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
                         <li class="dropdown nav-icon me-2">
                             <a href="#" data-bs-toggle="dropdown"
                                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
@@ -273,14 +273,8 @@
 
         </div>
     </div>
-    <!-- Boostrap -->
-    <script src="{{ url('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
-    <!-- Jquery -->
-    <script src="{{ url('js/jquery/jquery-3.6.0.min.js') }}"></script>
-    <!-- Volet Admin Template -->
-    <script src="{{ url('js/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ url('js/app.js') }}"></script>
-    <script src="{{ url('js/main.js') }}"></script>
+    @include('include.script')
+    @yield('page_script')
 
     <script>
         $('#btn-logout').click((e) => {
@@ -292,8 +286,8 @@
             $('.loader-wrapper').fadeOut(500);
         });
     </script>
-
     @yield('js')
+   
 </body>
 
 </html>

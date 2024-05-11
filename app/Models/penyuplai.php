@@ -26,7 +26,7 @@ class penyuplai extends Model
     //     }
     use HasFactory;
 
-    protected $primaryKey = 'id_penyuplai';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'nama_penyuplai',
         'alamat_penyuplai',
