@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class cara_bayar extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'id_cara_bayar';
+    protected $primaryKey = 'id';
     protected $fillable = [
-        'nama_cara_bayar'
+        'nama_carabayar'
     ];
     public static function getData(int $paginate = 20)
     {

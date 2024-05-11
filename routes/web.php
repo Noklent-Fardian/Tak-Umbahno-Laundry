@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\pegawai\PenyuplaiController;
 use App\Http\Controllers\pegawai\JenisMemberController;
+use App\Http\Controllers\pegawai\CayaBayarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
 
@@ -35,7 +36,13 @@ Route::get('/pegawai/jenis_member/edit/{id}', [JenisMemberController::class, 'ed
 Route::patch('/pegawai/jenis_member/update/{id}', [JenisMemberController::class, 'update'])->name('pegawai.jenismember.update')->middleware(['auth', 'isloginPegawai']);
 Route::delete('/pegawai/jenis_member/delete/{id}', [JenisMemberController::class, 'destroy'])->name('pegawai.jenismember.delete')->middleware(['auth', 'isloginPegawai']);
 
-
+//CARA BAYAR
+Route::get('/pegawai/cara_bayar/index', [CayaBayarController::class, 'index'])->name('pegawai.carabayar.index')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/cara_bayar/tambah', [CayaBayarController::class, 'create'])->name('pegawai.carabayar.create')->middleware(['auth', 'isloginPegawai']);
+Route::post('/pegawai/cara_bayar/store', [CayaBayarController::class, 'store'])->name('pegawai.carabayar.store')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/cara_bayar/edit/{id}', [CayaBayarController::class, 'edit'])->name('pegawai.carabayar.edit')->middleware(['auth', 'isloginPegawai']);
+Route::patch('/pegawai/cara_bayar/update/{id}', [CayaBayarController::class, 'update'])->name('pegawai.carabayar.update')->middleware(['auth', 'isloginPegawai']);
+Route::delete('/pegawai/cara_bayar/delete/{id}', [CayaBayarController::class, 'destroy'])->name('pegawai.carabayar.delete')->middleware(['auth', 'isloginPegawai']);
 
 
 Route::resource('/customers', \App\Http\Controllers\CustomerController::class);

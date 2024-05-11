@@ -220,7 +220,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class='sidebar-link'>
+                            <a href="{{ url('pegawai/cara_bayar/index') }}" class='sidebar-link'>
                                 <i class="fa-solid fa-money-bill" width="20ox"></i>
                                 <span class="ml-md-3">Metode Pembayaran</span>
                             </a>
