@@ -13,6 +13,5 @@ class R_mengurangi extends Model
         'id_stock',
         'id_layanan',
         'stock_used',
-        'stock_used2'
     ];
 }

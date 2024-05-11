@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_stock')->constrained('stocks')->onDelete('cascade');
             $table->foreignId('id_pegawai')->constrained('pegawais')->onDelete('cascade');
-            $table->float('stock_used');
-            $table->float('stock_used2')->nullable();
+            $table->integer('stock_used');
             $table->timestamps();
         });
     }

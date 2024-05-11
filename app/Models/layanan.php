@@ -8,14 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class layanan extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'id_layanan';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'nama_layanan',
         'harga_layanan',
         'jenis_satuan',
         'deskripsi_layanan',
-        'stock_used',
-        'stock_used2'
     ];
     public static function getData(int $paginate = 20)
         {

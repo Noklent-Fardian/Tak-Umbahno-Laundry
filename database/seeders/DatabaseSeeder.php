@@ -131,48 +131,37 @@ class DatabaseSeeder extends Seeder
             'harga_layanan' => 12000,
             'jenis_satuan' => 'kg',
             'deskripsi_layanan' => 'Cuci Express 3 jam selesai, dapat ditunggu di tempat,bisa dijemput dan diantar',
-            'stock_used' => 0.2,
-            'stock_used2' => 0.1,
         ]);
         DB::table('layanans')->insert([
             'nama_layanan' => 'Cuci Regular 3 hari selesai',
             'harga_layanan' => 5000,
             'jenis_satuan' => 'kg',
             'deskripsi_layanan' => 'Cuci Express 3 hari selesai',
-            'stock_used' => 0.2,
-            'stock_used2' => 0.1,
         ]);
         DB::table('layanans')->insert([
             'nama_layanan' => 'Cuci sprei sedang',
             'harga_layanan' => 10000,
             'jenis_satuan' => 'pcs',
             'deskripsi_layanan' => 'Cuci sprei sedang',
-            'stock_used' => 0.2,
-            'stock_used2' => 0.1,
         ]);
         DB::table('layanans')->insert([
             'nama_layanan' => 'Cuci spre besar',
             'harga_layanan' => 15000,
             'jenis_satuan' => 'pcs',
             'deskripsi_layanan' => 'Cuci sprei besar',
-            'stock_used' => 0.1,
-            'stock_used2' => 0.1,
         ]);
         DB::table('layanans')->insert([
             'nama_layanan' => 'Cuci boneka kecil',
             'harga_layanan' => 5000,
             'jenis_satuan' => 'pcs',
             'deskripsi_layanan' => 'Cuci boneka',
-            'stock_used' => 0.1,
-            'stock_used2' => 0.1,
         ]);
         DB::table('layanans')->insert([
             'nama_layanan' => 'Cuci boneka besar',
             'harga_layanan' => 10000,
             'jenis_satuan' => 'pcs',
             'deskripsi_layanan' => 'Cuci boneka besar',
-            'stock_used' => 0.2,
-            'stock_used2' => 0.2,
+           
         ]);
 
         DB::table('cara_bayars')->insert([

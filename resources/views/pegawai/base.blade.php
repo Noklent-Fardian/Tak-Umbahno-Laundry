@@ -201,7 +201,7 @@
                         <li class='sidebar-title pt-4'>Sub Menu</li>
 
                         <li class="sidebar-item">
-                            <a href="#" class='sidebar-link'>
+                            <a href="{{ url('pegawai/layanan/index') }}" class='sidebar-link'>
                                 <i class="fa-solid fa-dumpster-fire" width="20px"></i>
                                 <span class="ml-md-2">Layanan</span>
                             </a>

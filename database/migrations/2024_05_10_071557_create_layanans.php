@@ -21,10 +21,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nama_layanan', 50);
             $table->integer('harga_layanan');
-            $table->enum('jenis_satuan', ['kg', 'pcs', 'dus', 'liter', 'meter'])->default('pcs');
+            $table->string('jenis_satuan')->default('pcs');
             $table->string('deskripsi_layanan', 100);
-            $table->float('stock_used');
-            $table->float('stock_used2')->nullable();
 
 
         });

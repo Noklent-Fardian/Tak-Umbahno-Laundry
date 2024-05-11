@@ -52,5 +52,14 @@ Route::get('/pegawai/gudang/edit/{id}', [App\Http\Controllers\pegawai\StockContr
 Route::patch('/pegawai/gudang/update/{id}', [App\Http\Controllers\pegawai\StockController::class, 'update'])->name('pegawai.gudang.update')->middleware(['auth', 'isloginPegawai']);
 Route::delete('/pegawai/gudang/delete/{id}', [App\Http\Controllers\pegawai\StockController::class, 'destroy'])->name('pegawai.gudang.delete')->middleware(['auth', 'isloginPegawai']);
 
+//layanan
+Route::get('/pegawai/layanan/index', [App\Http\Controllers\pegawai\LayananController::class, 'index'])->name('pegawai.layanan.index')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/layanan/tambah', [App\Http\Controllers\pegawai\LayananController::class, 'create'])->name('pegawai.layanan.create')->middleware(['auth', 'isloginPegawai']);
+Route::post('/pegawai/layanan/store', [App\Http\Controllers\pegawai\LayananController::class, 'store'])->name('pegawai.layanan.store')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/layanan/edit/{id}', [App\Http\Controllers\pegawai\LayananController::class, 'edit'])->name('pegawai.layanan.edit')->middleware(['auth', 'isloginPegawai']);
+Route::patch('/pegawai/layanan/update/{id}', [App\Http\Controllers\pegawai\LayananController::class, 'update'])->name('pegawai.layanan.update')->middleware(['auth', 'isloginPegawai']);
+Route::delete('/pegawai/layanan/delete/{id}', [App\Http\Controllers\pegawai\LayananController::class, 'destroy'])->name('pegawai.layanan.delete')->middleware(['auth', 'isloginPegawai']);
+
+
 
 Route::resource('/customers', \App\Http\Controllers\CustomerController::class);
