@@ -214,7 +214,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class='sidebar-link'>
+                            <a href="{{ url('pegawai/jenis_member/index') }}" class='sidebar-link'>
                                 <i class="fas fa-house-user"></i>
                                 <span class="ml-md-2">Jenis Member</span>
                             </a>

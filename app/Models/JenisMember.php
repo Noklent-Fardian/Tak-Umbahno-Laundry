@@ -15,6 +15,6 @@ class JenisMember extends Model
      * @var array
      */
     protected $fillable = [
-        'nama_jenisMember',
+        'nama_jenisMember'
     ];
 }
