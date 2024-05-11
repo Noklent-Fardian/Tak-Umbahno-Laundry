@@ -72,7 +72,7 @@
                         @forelse ($data as $jenis_Member)
                             <tr>
                                 <td class="text-center"> {{ $loop->index + 1 }}</td>
-                                <td> {{ $jenis_Member->id }}</td>
+                                <td style="width:10%"> {{ $jenis_Member->id }}</td>
                                 <td> {{ $jenis_Member->nama_jenisMember }}</td>
                                 <td style="width:20%">
                                     <a href="{{ route('pegawai.jenismember.edit', $jenis_Member->id) }}"

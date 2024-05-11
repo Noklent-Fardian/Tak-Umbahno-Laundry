@@ -44,12 +44,12 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-            <h6 class="m-0 font-weight-bold text-primary">Daftar Metode Pembayaran</h6>
-            <a href="{{ route('pegawai.carabayar.create') }}" class="btn btn-primary btn-icon-split btn-sm">
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Stock Di Gudang</h6>
+            <a href="{{ route('pegawai.gudang.create') }}" class="btn btn-primary btn-icon-split btn-sm">
                 <span class="icon text-white-50">
                     <i class="fas fa-plus"></i>
                 </span>
-                <span class="text">Tambah Metode Pembayaran</span>
+                <span class="text">Tambah Jenis Stock</span>
             </a>
         </div>
 
@@ -60,19 +60,23 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>ID Metode Pembayaran</th>
-                            <th>Nama</th>
+                            <th>ID Jenis </th>
+                            <th>Nama Barang </th>
+                            <th>Stock Tersedia</th>
+                            <th>Satuan</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($data as $cara_bayar)
+                        @forelse ($data as $stock)
                             <tr>
                                 <td class="text-center"> {{ $loop->index + 1 }}</td>
-                                <td style="width:10%"> {{ $cara_bayar->id }}</td>
-                                <td> {{ $cara_bayar->nama_carabayar }}</td>
+                                <td> {{ $stock->id }}</td>
+                                <td> {{ $stock->nama_barang }}</td>
+                                <td> {{ $stock->stok_barang }}</td>
+                                <td> {{ $stock->satuan_barang }}</td>
                                 <td style="width:20%">
-                                    <a href="{{ route('pegawai.carabayar.edit', $cara_bayar->id) }}"
+                                    <a href="{{ route('pegawai.gudang.edit', $stock->id) }}"
                                         class="btn btn-primary btn-icon-split btn-sm">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-pen"></i>
@@ -80,7 +84,7 @@
                                         <span class="text">Edit</span>
                                     </a>
                                     <button type="button" class="btn btn-danger btn-icon-split btn-sm" data-toggle="modal"
-                                        data-target="#deleteModal" data-id="{{ $cara_bayar->id }}">
+                                        data-target="#deleteModal" data-id="{{ $stock->id }}">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                         </span>
@@ -114,11 +118,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Apakah Anda Yakin Ingin Menghapus Data Metode Pembayaran Ini?
+                    Apakah Anda Yakin Ingin Menghapus Data Stock Barang Ini?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
-                    <form id="deleteForm" method="POST" action="{{ route('pegawai.carabayar.delete', ['id' => $cara_bayar->id]) }}">
+                    <form id="deleteForm" method="POST" action="{{ route('pegawai.gudang.delete', ['id' => $stock->id]) }}">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Hapus</button>
@@ -131,9 +135,10 @@
 
 @section('page_script')
     <!-- Page level plugins -->
-    <script src="{{ asset('vendor/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="{{ asset('js/demo/datatables-demo.js') }}"></script>
+    <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
+   
 @endsection

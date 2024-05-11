@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_barang', 50);
             $table->integer('stok_barang');
-            $table->enum('satuan_barang', ['kg', 'pcs', 'dus', 'liter', 'meter'])->default('pcs');
+            $table->string('satuan_barang');
             $table->timestamps();
         });
     }

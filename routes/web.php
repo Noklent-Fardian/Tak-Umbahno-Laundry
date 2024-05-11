@@ -44,5 +44,13 @@ Route::get('/pegawai/cara_bayar/edit/{id}', [CayaBayarController::class, 'edit']
 Route::patch('/pegawai/cara_bayar/update/{id}', [CayaBayarController::class, 'update'])->name('pegawai.carabayar.update')->middleware(['auth', 'isloginPegawai']);
 Route::delete('/pegawai/cara_bayar/delete/{id}', [CayaBayarController::class, 'destroy'])->name('pegawai.carabayar.delete')->middleware(['auth', 'isloginPegawai']);
 
+//gudang
+Route::get('/pegawai/gudang/index', [App\Http\Controllers\pegawai\StockController::class, 'index'])->name('pegawai.gudang.index')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/gudang/tambah', [App\Http\Controllers\pegawai\StockController::class, 'create'])->name('pegawai.gudang.create')->middleware(['auth', 'isloginPegawai']);
+Route::post('/pegawai/gudang/store', [App\Http\Controllers\pegawai\StockController::class, 'store'])->name('pegawai.gudang.store')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/gudang/edit/{id}', [App\Http\Controllers\pegawai\StockController::class, 'edit'])->name('pegawai.gudang.edit')->middleware(['auth', 'isloginPegawai']);
+Route::patch('/pegawai/gudang/update/{id}', [App\Http\Controllers\pegawai\StockController::class, 'update'])->name('pegawai.gudang.update')->middleware(['auth', 'isloginPegawai']);
+Route::delete('/pegawai/gudang/delete/{id}', [App\Http\Controllers\pegawai\StockController::class, 'destroy'])->name('pegawai.gudang.delete')->middleware(['auth', 'isloginPegawai']);
+
 
 Route::resource('/customers', \App\Http\Controllers\CustomerController::class);

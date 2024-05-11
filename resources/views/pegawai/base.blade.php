@@ -193,7 +193,7 @@
                                     <a href="#">Tambah Stock</a>
                                 </li>
                                 <li>
-                                    <a href="#">Edit Stock</a>
+                                    <a href="{{ url('pegawai/gudang/index') }}">Gudang</a>
                                 </li>
                             </ul>
                         </li>
