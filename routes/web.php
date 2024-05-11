@@ -88,3 +88,11 @@ Route::post('/pegawai/pegawai/store', [App\Http\Controllers\pegawai\PegawaiContr
 Route::get('/pegawai/pegawai/edit/{id}', [App\Http\Controllers\pegawai\PegawaiController::class, 'edit'])->name('pegawai.pegawai.edit')->middleware(['auth', 'isloginPegawai']);
 Route::patch('/pegawai/pegawai/update/{id}', [App\Http\Controllers\pegawai\PegawaiController::class, 'update'])->name('pegawai.pegawai.update')->middleware(['auth', 'isloginPegawai']);
 Route::delete('/pegawai/pegawai/delete/{id}', [App\Http\Controllers\pegawai\PegawaiController::class, 'destroy'])->name('pegawai.pegawai.delete')->middleware(['auth', 'isloginPegawai']);
+
+//transaksi
+Route::get('/pegawai/transaksi/index', [App\Http\Controllers\pegawai\TransaksiController::class, 'index'])->name('pegawai.transaksi.index')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/transaksi/tambah', [App\Http\Controllers\pegawai\TransaksiController::class, 'create'])->name('pegawai.transaksi.create')->middleware(['auth', 'isloginPegawai']);
+Route::post('/pegawai/transaksi/store', [App\Http\Controllers\pegawai\TransaksiController::class, 'store'])->name('pegawai.transaksi.store')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/transaksi/edit/{id}', [App\Http\Controllers\pegawai\TransaksiController::class, 'edit'])->name('pegawai.transaksi.edit')->middleware(['auth', 'isloginPegawai']);
+Route::patch('/pegawai/transaksi/update/{id}', [App\Http\Controllers\pegawai\TransaksiController::class, 'update'])->name('pegawai.transaksi.update')->middleware(['auth', 'isloginPegawai']);
+Route::delete('/pegawai/transaksi/delete/{id}', [App\Http\Controllers\pegawai\TransaksiController::class, 'destroy'])->name('pegawai.transaksi.delete')->middleware(['auth', 'isloginPegawai']);

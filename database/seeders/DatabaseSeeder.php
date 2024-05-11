@@ -225,5 +225,28 @@ class DatabaseSeeder extends Seeder
             'total_bayar' => 10000,
             'rincian' => 'Cuci sprei sedang',
         ]);
+
+        //add customer name Juned, ramdan,zulfikar
+        DB::table('customers')->insert([
+            'customer_nama' => 'Juned',
+            'customer_noTelp' => '087866301810',
+            'customer_alamat' => 'Jl. Raya Cikarang',
+            'user_id' => 2,
+            'jenis_member_id' => 1,
+        ]);
+        DB::table('customers')->insert([
+            'customer_nama' => 'Ramdan',
+            'customer_noTelp' => '087866301810',
+            'customer_alamat' => 'Jl. Raya Cikarang',
+            'user_id' => 2,
+            'jenis_member_id' => 1,
+        ]);
+        DB::table('customers')->insert([
+            'customer_nama' => 'Zulfikar',
+            'customer_noTelp' => '087866301810',
+            'customer_alamat' => 'Jl. Raya Cikarang',
+            'user_id' => 2,
+            'jenis_member_id' => 1,
+        ]);
     }
 }

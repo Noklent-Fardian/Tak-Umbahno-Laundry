@@ -27,12 +27,12 @@ return new class extends Migration
             $table->foreignId('id_pegawai')->constrained('pegawais')->onDelete('cascade');
             $table->foreignId('id_cara_bayar')->constrained('cara_bayars')->onDelete('cascade');
             $table->foreignId('id_customer')->constrained('customers')->onDelete('cascade');
-            $table->float('total_transaksi');
+            $table->integer('total_transaksi');
             $table->date('tanggal_transaksi');
             $table->date('estimasi_selesai');
             $table->string('status_transaksi', 50);
-            $table->float('diskon');
-            $table->float('total_bayar');
+            $table->integer('diskon');
+            $table->integer('total_bayar');
             $table->string('rincian', 100);
             $table->foreignId('id_layanan')->constrained('layanans')->onDelete('cascade');
 

@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class transaksis extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'id_transaksi';
+    protected $table = 'transaksis';
+    protected $primaryKey = 'id';
     protected $fillable = [
+        
         'id_pegawai',
         'id_cara_bayar',
         'id_customer',
@@ -30,5 +32,22 @@ class transaksis extends Model
     {
         return transaksis::where($col, 'like', '%' . $request . '%')->orderBy('created_at', 'desc')->paginate(20);
     }
+    public function pegawai()
+    {
+        return $this->belongsTo(Pegawai::class, 'id_pegawai', 'id');
+    }
+    public function cara_bayar()
+    {
+        return $this->belongsTo(cara_bayar::class, 'id_cara_bayar', 'id');
+    }
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class, 'id_customer', 'id');
+    }
+    public function layanan()
+    {
+        return $this->belongsTo(Layanan::class, 'id_layanan', 'id');
+    }
+
     
 }

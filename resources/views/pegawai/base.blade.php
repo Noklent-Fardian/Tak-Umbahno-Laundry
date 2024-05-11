@@ -47,8 +47,14 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <!-- CSS -->
     <style>
-        * {
+        * 
+        {
             font-family: 'Nunito', sans-serif;
+        }
+
+        th
+        {
+            white-space: nowrap;
         }
 
         label {
@@ -158,7 +164,7 @@
                         <li class='sidebar-title pt-0'>Main Menu</li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
+                            <a href="{{ url('pegawai/transaksi/index') }}" class="sidebar-link">
                                 <i class="fa-solid fa-cart-shopping" style="width: 20px"></i>
                                 <span>Transaksi</span>
                             </a>
