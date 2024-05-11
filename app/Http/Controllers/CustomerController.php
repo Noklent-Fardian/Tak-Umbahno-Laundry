@@ -26,7 +26,7 @@ class CustomerController extends Controller
         $customers = Customer::latest()->paginate(5);
 
         //render view with posts
-        return view('customers.index', compact('customers'));
+        return view('pegawai.customer.index', compact('customers'));
     }
 
     /**
@@ -39,7 +39,7 @@ class CustomerController extends Controller
         $users = User::where('role', 'Pembeli')->get();
         $jenisMembers = JenisMember::all(); 
         // Menampilkan view yang sesuai untuk membuat customer baru
-        return view('customers.create', compact('users', 'jenisMembers'));
+        return view('pegawai.customer.create', compact('users', 'jenisMembers'));
     }
 
     /**
@@ -48,7 +48,7 @@ class CustomerController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         // Validasi formulir
         $request->validate([

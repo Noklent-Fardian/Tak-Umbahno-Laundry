@@ -165,7 +165,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
+                            <a href="{{ url('pegawai/customer/index') }}" class="sidebar-link">
                                 <i class="fa-solid fa-users" width="20px"></i>
                                 <span>Customer</span>
                             </a>
@@ -177,7 +177,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
+                            <a href="{{ url('pegawai/pegawai/index') }}" class="sidebar-link">
                                 <i class="fa-solid fa-person" width="20px"></i>
                                 <span>Pegawai</span>
                             </a>

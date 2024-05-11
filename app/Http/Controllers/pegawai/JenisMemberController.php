@@ -22,6 +22,7 @@ class JenisMemberController extends Controller
      */
     public function create()
     {
+        
         return view('pegawai.jenis_member.create');
     }
 

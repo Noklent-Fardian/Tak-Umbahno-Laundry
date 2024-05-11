@@ -29,6 +29,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin123'),
         ]);
         DB::table('users')->insert([
+            'name' => 'Doppleganger',
+            'email' => 'admin1@gmail.com',
+            'no_hp' => '0878663810',
+            'role' => 'Pegawai',
+            'password' => bcrypt('admin123'),
+        ]);
+        DB::table('users')->insert([
             'name' => 'Berliana',
             'email' => 'pembeli@gmail.com',
             'no_hp' => '087866301811',
@@ -82,7 +89,7 @@ class DatabaseSeeder extends Seeder
             'alamat_pegawai' => 'Jl. Raya Cikarang',
             'no_telp_pegawai' => '087866301810',
             'email_pegawai' => '@gmail.com',
-            'user_id' => 1,
+            'user_id' => 3,
         ]);
         DB::table('pegawais')->insert([
             'nama_pegawai' => 'Petugas 2',

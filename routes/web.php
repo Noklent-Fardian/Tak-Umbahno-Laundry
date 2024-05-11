@@ -7,6 +7,7 @@ use App\Http\Controllers\pegawai\StockController;
 use App\Http\Controllers\pegawai\LayananController;
 use App\Http\Controllers\pegawai\AccountController;
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
 
@@ -72,6 +73,18 @@ Route::get('/pegawai/account/edit/{id}', [App\Http\Controllers\pegawai\AccountCo
 Route::patch('/pegawai/account/update/{id}', [App\Http\Controllers\pegawai\AccountController::class, 'update'])->name('pegawai.account.update')->middleware(['auth', 'isloginPegawai']);
 Route::delete('/pegawai/account/delete/{id}', [App\Http\Controllers\pegawai\AccountController::class, 'destroy'])->name('pegawai.account.delete')->middleware(['auth', 'isloginPegawai']);
 
+//customer
+Route::get('/pegawai/customer/index', [App\Http\Controllers\pegawai\CustomerController::class, 'index'])->name('pegawai.customer.index')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/customer/tambah', [App\Http\Controllers\pegawai\CustomerController::class, 'create'])->name('pegawai.customer.create')->middleware(['auth', 'isloginPegawai']);
+Route::post('/pegawai/customer/store', [App\Http\Controllers\pegawai\CustomerController::class, 'store'])->name('pegawai.customer.store')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/customer/edit/{id}', [App\Http\Controllers\pegawai\CustomerController::class, 'edit'])->name('pegawai.customer.edit')->middleware(['auth', 'isloginPegawai']);
+Route::patch('/pegawai/customer/update/{id}', [App\Http\Controllers\pegawai\CustomerController::class, 'update'])->name('pegawai.customer.update')->middleware(['auth', 'isloginPegawai']);
+Route::delete('/pegawai/customer/delete/{id}', [App\Http\Controllers\pegawai\CustomerController::class, 'destroy'])->name('pegawai.customer.delete')->middleware(['auth', 'isloginPegawai']);
 
-
-Route::resource('/customers', \App\Http\Controllers\CustomerController::class);
+// pegawai
+Route::get('/pegawai/pegawai/index', [App\Http\Controllers\pegawai\PegawaiController::class, 'index'])->name('pegawai.pegawai.index')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/pegawai/tambah', [App\Http\Controllers\pegawai\PegawaiController::class, 'create'])->name('pegawai.pegawai.create')->middleware(['auth', 'isloginPegawai']);
+Route::post('/pegawai/pegawai/store', [App\Http\Controllers\pegawai\PegawaiController::class, 'store'])->name('pegawai.pegawai.store')->middleware(['auth', 'isloginPegawai']);
+Route::get('/pegawai/pegawai/edit/{id}', [App\Http\Controllers\pegawai\PegawaiController::class, 'edit'])->name('pegawai.pegawai.edit')->middleware(['auth', 'isloginPegawai']);
+Route::patch('/pegawai/pegawai/update/{id}', [App\Http\Controllers\pegawai\PegawaiController::class, 'update'])->name('pegawai.pegawai.update')->middleware(['auth', 'isloginPegawai']);
+Route::delete('/pegawai/pegawai/delete/{id}', [App\Http\Controllers\pegawai\PegawaiController::class, 'destroy'])->name('pegawai.pegawai.delete')->middleware(['auth', 'isloginPegawai']);
